@@ -1,35 +1,45 @@
-@font-face {
-  font-family: 'Minecraft';
-  src: url(./assets/minecraft.otf) format('opentype');
-}
+@use "splash-screen";
 
 * {
-  margin: 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-body {
-  height: 100dvh;
-  overflow: hidden;
-  font-family: 'Minecraft';
-  background: #000 url(./assets/stars.png) repeat top center;
-  color: #fff;
-}
-
-#app {
+canvas {
+  background: #eee;
+  display: block;
+  width: 100%;
   height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
-.title {
+body{
+  overflow: hidden;
+}
+
+
+#message {
   text-align: center;
+  font-size: 48px;
+  /* Увеличиваем размер шрифта */
+  color: #0095DD;
+  position: absolute;
+  top: 50%;
+  /* Центрируем по вертикали */
+  left: 50%;
+  /* Центрируем по горизонтали */
+  transform: translate(-50%, -50%);
+  /* Сдвигаем для центрирования */
+  display: none;
+  /* Скрываем по умолчанию */
 }
 
-.version {
-  font-size: 12px;
+#scoreboard {
   position: absolute;
-  bottom: 6px;
-  right: 6px;
+  bottom: 20px;
+  /* Располагаем внизу */
+  left: 20px;
+  /* Устанавливаем отступ слева */
+  font-size: 20px;
+  color: #0095DD;
 }
